@@ -9,9 +9,6 @@ function App() {
   const [result, setResult] = useState(null)
 
 
-  console.log(result)
-
-
   useEffect(() => {
     const apiResult = getResults()
     apiResult.then((value) => {
