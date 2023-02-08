@@ -2,13 +2,14 @@ import { VStack, Text, Stack } from '@chakra-ui/react'
 
 
 const Results = ({result}) => {
-
+   
     return (
-        
         <VStack w={'80%'}>
             <Text>Pokemon Results</Text>
             <Stack w={'100%'} direction={'row'} justify={'center'}>
-                {result.abilities?.map((item) => {
+                {
+                result ? <>
+                      {result.abilities?.map((item) => {
                     return (
                         <>
                             <Stack width={'200px'} h={'200px'} bgColor={'blue'} align={'center'} justify={'center'} borderRadius={'15px'}>
@@ -23,6 +24,14 @@ const Results = ({result}) => {
                     )
                 }
                 )}
+                    
+                    </> : <>
+                        <Text color={'red'} fontSize={'10px'}>No hay pokemones</Text>
+                    </>
+                }
+
+
+              
             </Stack>
         </VStack>
     )

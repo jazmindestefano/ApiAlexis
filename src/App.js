@@ -6,8 +6,11 @@ import { useEffect, useState } from 'react';
 import { getResults } from './utils/result';
 
 function App() {
-
   const [result, setResult] = useState(null)
+
+
+  console.log(result)
+
 
   useEffect(() => {
     const apiResult = getResults()
